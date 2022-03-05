@@ -6,7 +6,7 @@ import SearchIcon from './search.svg'
 
 // 5c80d000
 
-const API_URL = `http://www.omdbapi.com/?apikey=5c80d000`
+const API_URL = `https://www.omdbapi.com/?apikey=5c80d000`
 
 
 
@@ -68,7 +68,8 @@ const App = () => {
         </div>
       ) : (
         <div className='empty'>
-          <h2>No Movies Found!</h2>
+          {!loading && <h2>No Movies Found!</h2>}
+
         </div>
       )}
 
